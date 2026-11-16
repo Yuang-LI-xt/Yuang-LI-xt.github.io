@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yuang Li</title>
+<meta name="description" content="Yuang Li: data-centric AI, long-context LLM pre-training, and out-of-distribution detection." />
+<style>
+  :root {
+    --fg: #1f2328;
+    --muted: #59636e;
+    --accent: #0a66c2;
+    --line: #e5e7eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--fg);
+    background: #fff;
+    line-height: 1.65;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 44px;
+  }
+  .photo {
+    flex: 0 0 132px;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f3f4f6;
+  }
+  header h1 { margin: 0 0 4px; font-size: 2.2rem; letter-spacing: -0.02em; }
+  header .tagline { margin: 0 0 12px; color: var(--muted); }
+  .links a { margin-right: 14px; font-weight: 500; }
+
+  section { margin-top: 40px; }
+  h2 {
+    font-size: 1.15rem;
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+  h3 { font-size: 1.02rem; margin: 0 0 2px; }
+  .meta { margin: 0 0 6px; color: var(--muted); font-size: .92rem; }
+  .item { margin-bottom: 20px; }
+  p { margin: 0 0 8px; }
+  ul { margin: 6px 0 0; padding-left: 20px; }
+  li { margin-bottom: 4px; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+
+  @media (max-width: 560px) {
+    header { flex-direction: column; text-align: center; }
+    .links a { display: inline-block; margin: 4px 8px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <img class="photo" src="assets/photo.jpg" alt="Yuang Li" onerror="this.style.display='none'" />
+    <div>
+      <h1>Yuang Li</h1>
+      <p class="tagline">M.S. in Data Science, University of Wisconsin–Madison</p>
+      <p class="links">
+        <a href="./Yuang_Li_CV.pdf">CV</a>
+        <a href="https://github.com/Yuang-LI-xt">GitHub</a>
+        <a href="mailto:liya72dl@gmail.com">Email</a>
+      </p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>
+      I work on data-centric AI and foundation models. My current focus is long-context pre-training and how data construction and quality shape what large models learn. I have also worked on out-of-distribution detection and graph machine learning.
+    </p>
+  </section>
+
+  <section id="research">
+    <h2>Research</h2>
+    <div class="item">
+      <h3>LoGo-Fuse: training-free OOD detection for 3D point clouds</h3>
+      <p class="meta">UW–Madison, with Prof. Xiao Luo, 2026</p>
+      <p>Local–global fusion on frozen ULIP-2 features. Macro AUROC of 0.936 on ShapeNetCore54 and 0.903 on ScanObjectNN15 (full-shot).</p>
+    </div>
+    <div class="item">
+      <h3>Active Evidence Cache: modality-aware KV selection</h3>
+      <p class="meta">NTU, with Dr. Rongcheng Tu, 2026</p>
+      <p>Training-free KV selection for Qwen2.5-VL-7B under sparse multimodal decoding.</p>
+    </div>
+    <div class="item">
+      <h3>Influencer strategies for information diffusion</h3>
+      <p class="meta">SUSTech undergraduate thesis, advised by Prof. Yanqing Hu, 2025</p>
+      <p>Simulations on an 81,306-node network. Multiple small influencers reached 11.3% wider coverage than one large influencer.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <h3>Pre-training Algorithm Intern, Baidu</h3>
+      <p class="meta">Foundation Model Department, Beijing, May – Sep 2026</p>
+      <ul>
+        <li>Built a 128K-context continued pre-training and SFT workflow for Llama-3-8B.</li>
+        <li>Raised throughput by 49.7% and MFU from 28.0% to 42.8%.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>Data Governance Intern, ByteDance</h3>
+      <p class="meta">TikTok Division, Shanghai, 2025</p>
+      <ul>
+        <li>Built collection and LLM-labeling pipelines for about 100B text tokens used in content-safety training.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <h3>Instructor, Lumist</h3>
+      <p class="meta">Time Series and Machine Learning, Remote, 2025–2026</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="item">
+      <h3><a href="./Yuang_Li_Baidu_Refinement_Technical_Report.pdf">Constrained Document Refinement for Long-Context Pre-training</a></h3>
+      <p class="meta">Technical report, Nov 2026</p>
+      <p>Deterministic cleaning plus constrained LLM refinement. A 99% repair rate on line breaks and typos, and a 2.8-point average gain on long-context benchmarks.</p>
+    </div>
+    <div class="item">
+      <h3><a href="./RAG_Data_Construction_Technical_Report.pdf">Constructing RAG Data for Long-Context CPT</a></h3>
+      <p class="meta">Technical report, 2026</p>
+      <p>A reusable pipeline for long-context training samples with grounded questions, complete evidence documents, hard negatives, and multi-QA contexts. Across four target-bearing variants, multi-value retrieval and document ranking improved, while UUID-based key-value retrieval decreased.</p>
+    </div>
+    <div class="item">
+      <h3>Qwen3: efficient fine-tuning for tool calling</h3>
+      <p class="meta">Nov 2026 – present</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p><strong>ML and systems:</strong> PyTorch, Transformers, Megatron-Core, FSDP, FlashAttention 3, vLLM</p>
+    <p><strong>Methods:</strong> OOD detection, continued pre-training, SFT, knowledge distillation, data curation</p>
+    <p><strong>Languages:</strong> Python, SQL</p>
+  </section>
+
+  <footer>
+    liya72dl@gmail.com · <a href="https://github.com/Yuang-LI-xt">GitHub</a> · <a href="./Yuang_Li_CV.pdf">CV</a>
+  </footer>
+
+</main>
+</body>
+</html>
